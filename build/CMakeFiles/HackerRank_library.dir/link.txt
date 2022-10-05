@@ -1,0 +1,2 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libHackerRank_library.a CMakeFiles/HackerRank_library.dir/src/main.cpp.o CMakeFiles/HackerRank_library.dir/src/module/dummyLib.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libHackerRank_library.a

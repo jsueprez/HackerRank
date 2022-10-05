@@ -1,0 +1,238 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "src/ext/google/benchmark/src/libbenchmark_main.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries",
+			"add_definitions",
+			"cxx_feature_check",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"src/ext/google/benchmark/src/CMakeLists.txt",
+			"src/ext/google/benchmark/cmake/CXXFeatureCheck.cmake",
+			"src/ext/google/benchmark/CMakeLists.txt",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 62,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 70,
+				"parent" : 0
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 310,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 66,
+				"parent" : 4
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 308,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 66,
+				"parent" : 6
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 319,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 66,
+				"parent" : 8
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 230,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 66,
+				"parent" : 10
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 3,
+				"line" : 34,
+				"parent" : 12
+			},
+			{
+				"command" : 4,
+				"file" : 3,
+				"line" : 35,
+				"parent" : 12
+			},
+			{
+				"command" : 4,
+				"file" : 3,
+				"line" : 57,
+				"parent" : 12
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 329,
+				"parent" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 3,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-DQT_QML_DEBUG  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -Wsuggest-override  -pedantic  -pedantic-errors  -Wshorten-64-to-32  -fstrict-aliasing  -Wno-deprecated-declarations  -fno-exceptions  -Wstrict-aliasing  -Wthread-safety -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -fvisibility=hidden -fvisibility-inlines-hidden"
+				},
+				{
+					"fragment" : "-std=c++11"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "BENCHMARK_STATIC_DEFINE"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "HAVE_POSIX_REGEX"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "HAVE_STD_REGEX"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "HAVE_STEADY_CLOCK"
+				},
+				{
+					"backtrace" : 11,
+					"define" : "HAVE_THREAD_SAFETY_ATTRIBUTES"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 13,
+					"path" : "/Users/jsueprez/workspace/CppStory/HackerRank/src"
+				},
+				{
+					"backtrace" : 14,
+					"path" : "/Users/jsueprez/workspace/CppStory/HackerRank/src/module"
+				},
+				{
+					"backtrace" : 15,
+					"path" : "/Users/jsueprez/workspace/CppStory/HackerRank/src/ext/google/googletest/googletest/src"
+				},
+				{
+					"backtrace" : 16,
+					"path" : "/Users/jsueprez/workspace/CppStory/HackerRank/src/ext/google/benchmark/include"
+				},
+				{
+					"backtrace" : 17,
+					"path" : "/Users/jsueprez/workspace/CppStory/HackerRank/src/ext/google/benchmark/src"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "11"
+			},
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "benchmark::@58ef1bd9336f1b9d7b71"
+		}
+	],
+	"id" : "benchmark_main::@58ef1bd9336f1b9d7b71",
+	"name" : "benchmark_main",
+	"nameOnDisk" : "libbenchmark_main.a",
+	"paths" : 
+	{
+		"build" : "src/ext/google/benchmark/src",
+		"source" : "src/ext/google/benchmark/src"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ext/google/benchmark/src/benchmark_main.cc",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}
