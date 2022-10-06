@@ -6,6 +6,7 @@
 #include <numeric>
 #include <iomanip>
 #include <cmath>
+#include <algorithm>
 
 using std::vector;
 using std::string;
@@ -250,13 +251,10 @@ string caesarCipher(string s, int k)
 
 bool isPalindrome(string_view s1){
 
-    if(s1.length() < 3) return true;
-
     auto front = s1.begin();
     auto back{s1.end() - 1};
 
-    cout << *front << *back << '\n';
-    while(front != back){
+    while(front < back){
         if(*front != *back)
             return false;
         front++;
@@ -269,24 +267,28 @@ bool isPalindrome(string_view s1){
 int palindromeIndex(string s)
 {
 
-    auto diff{0};
-    auto index{-1};
+    if(isPalindrome(s)) return -1;
     auto lenght{s.length()};
 
     auto s1{s};
+    auto s2{s};
+    std::reverse(s2.begin(),s2.end());
 
-    for(auto& ch : s){
-        auto i = &ch - &s[0];
+    auto first_diff = std::mismatch(s1.begin(), s1.end(),
+                                         s2.begin(), s2.end());
+    auto index = std::distance(s1.begin(), first_diff.first);
 
-        s1.erase(i,1);
-        if(isPalindrome(s1)){
-            return i;
-        }
-        s1.insert(i,1,ch);
+    s.erase(index,1);
+    s1.erase(lenght - index - 1, 1);
 
+    if(isPalindrome(s)){
+        return index;
+    }else if(isPalindrome(s1)){
+       return lenght - index - 1;
     }
 
     return -1;
+
 
 
 }
@@ -361,10 +363,9 @@ int main()
     cout << caesarCipher(s3, 87) << '\n';
 
 
-    auto s4{"aaab"};
+    auto s4{"aaabaaaaaaaaaaa"};
 
     cout << palindromeIndex(s4) << '\n';
-
 
     return 0;
 }
