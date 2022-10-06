@@ -21,6 +21,8 @@ set(CORE_SOURCE
 
 set(CORE_HEADERS
     src/module/dummyLib.h
+    src/module/plusMinus.h
+    src/module/timeConversion.h
 )
 
 file(GLOB TEST_SOURCE

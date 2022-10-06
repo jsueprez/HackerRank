@@ -3,22 +3,22 @@
 
 int main(int argc, char **argv)
 {
-  ::testing::InitGoogleTest(&argc, argv);
+    ::testing::InitGoogleTest(&argc, argv);
 
-  constexpr const int tests_run_okay{0};
-  constexpr const int tests_run_with_error{1};
+    constexpr const int tests_run_okay{0};
+    constexpr const int tests_run_with_error{1};
 
-  if (RUN_ALL_TESTS() == tests_run_okay)
-  {
-    ::benchmark::Initialize(&argc, argv);
-    if (::benchmark::ReportUnrecognizedArguments(argc, argv))
+    if (RUN_ALL_TESTS() == tests_run_okay)
     {
-      return tests_run_with_error;
+        ::benchmark::Initialize(&argc, argv);
+        if (::benchmark::ReportUnrecognizedArguments(argc, argv))
+        {
+            return tests_run_with_error;
+        }
+        ::benchmark::RunSpecifiedBenchmarks();
     }
-    ::benchmark::RunSpecifiedBenchmarks();
-  }
-  else
-  {
-    return tests_run_with_error;
-  }
+    else
+    {
+        return tests_run_with_error;
+    }
 }
