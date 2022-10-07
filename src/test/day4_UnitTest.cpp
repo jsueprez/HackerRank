@@ -318,6 +318,7 @@ TEST_F(TestingDay4, gridChallenge_case16)
                                 "donmfcoctjjcxihm",};
     EXPECT_EQ(d4.gridChallenge(v1), false);
 }
+
 TEST_F(TestingDay4, gridChallenge_case15)
 {
     std::vector<std::string> v1{"iobhposylbmxuxq",
@@ -553,4 +554,25 @@ TEST_F(TestingDay4, gridChallenge_longVector)
                                 "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
                                };
     EXPECT_EQ(d4.gridChallenge(v1), true);
+}
+
+TEST_F(TestingDay4, superDigit_case0)
+{
+    auto s1{"148"};
+    auto k{3};
+    EXPECT_EQ(d4.superDigit(s1,k), 3);
+}
+
+TEST_F(TestingDay4, superDigit_case1)
+{
+    auto s1{"9875"};
+    auto k{4};
+    EXPECT_EQ(d4.superDigit(s1,k), 8);
+}
+
+TEST_F(TestingDay4, superDigit_case2)
+{
+    auto s1{"123"};
+    auto k{3};
+    EXPECT_EQ(d4.superDigit(s1,k), 9);
 }
