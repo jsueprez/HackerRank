@@ -65,6 +65,7 @@ public:
      */
 
     int superDigit(std::string n, int k);
+    int executeSuperDigit();
 
 };
 
