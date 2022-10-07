@@ -1,22 +1,5 @@
 #include "benchmark/benchmark.h"
-#include "dummyLib.h"
-#include "plusMinus.h"
-#include "timeConversion.h"
-
-static void BM_dummySum(benchmark::State &state)
-{
-  DummyLib object;
-  int i1 = 2;
-  int i2 = 3;
-
-  // Perform setup here
-  for (auto _ : state)
-  {
-    // This code gets timed
-    object.dummySum(i1, i2);
-  }
-}
-BENCHMARK(BM_dummySum);
+#include "day_1.h"
 
 static void BM_plusMinus(benchmark::State &state)
 {
@@ -41,3 +24,27 @@ static void BM_timeConversion(benchmark::State &state)
     }
 }
 BENCHMARK(BM_timeConversion);
+
+static void BM_miniMax(benchmark::State &state)
+{
+
+    // Perform setup here
+    for (auto _ : state)
+    {
+        // This code gets timed
+        executeMiniMax();
+    }
+}
+BENCHMARK(BM_miniMax);
+
+static void BM_findMedian(benchmark::State &state)
+{
+
+    // Perform setup here
+    for (auto _ : state)
+    {
+        // This code gets timed
+        executeFindMedian();
+    }
+}
+BENCHMARK(BM_findMedian);

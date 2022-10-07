@@ -21,14 +21,18 @@ set(CORE_SOURCE
 
 set(CORE_HEADERS
     src/module/dummyLib.h
-    src/module/plusMinus.h
-    src/module/timeConversion.h
+    src/module/day_1.h
+    src/module/day_2.h
+    src/module/day_3.h
+    src/module/day_4.h
 )
 
 file(GLOB TEST_SOURCE
     src/test/dummy_Unittest.cpp
     src/test/main.cpp
-    src/test/dummy_PerformanceTest.cpp
+    src/test/day1_PerformanceTest.cpp
+    src/test/day2_PerformanceTest.cpp
+    src/test/day3_PerformanceTest.cpp
 )
 
 set(ALL_SRC_CODE ${CORE_SOURCE} ${CORE_HEADERS})
