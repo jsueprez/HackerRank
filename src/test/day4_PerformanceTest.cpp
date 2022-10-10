@@ -156,3 +156,16 @@ static void BM_SuperDigit_case7(benchmark::State &state)
   }
 }
 BENCHMARK(BM_SuperDigit_case7);
+
+static void BM_minimumBribe_case2(benchmark::State &state)
+{
+
+    // Perform setup here
+    for (auto _ : state)
+    {
+        // This code gets timed
+        day4 d4;
+        d4.excecuteMinimumBribes();
+    }
+}
+BENCHMARK(BM_minimumBribe_case2);
