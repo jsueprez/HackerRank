@@ -668,5 +668,19 @@ TEST_F(TestingDay4, minimumBribes_case2_1)
                         955, 961, 962, 963, 959, 964, 966, 960, 965, 969, 968, 971, 967, 970, 974, 972, 976, 973 ,975 ,979 ,977 ,981, 982,
                         978, 980, 983, 986, 984, 985, 989, 988, 987, 990, 993, 991, 995, 994, 997, 992, 999, 1000, 996, 998
                        };
-                          EXPECT_EQ(d4.minimumBribes(v1), 966);
-                      }
+    EXPECT_EQ(d4.minimumBribes(v1), 966);
+}
+
+TEST_F(TestingDay4, petrolpumps_case0)
+{
+    std::vector<std::vector<int>> v1{
+        {1, 5},
+        {10, 5},
+        {1, 5},
+        {10, 9},
+        {10, 3},
+        {3, 4}
+    };
+
+    EXPECT_EQ(d4.truckTour(v1), 1);
+}

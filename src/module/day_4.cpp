@@ -224,3 +224,40 @@ int day4::excecuteMinimumBribes(){
 
     return minimumBribes(v1);
 }
+
+void refill_petrol(const int& amount, int& truck_petrol){
+    truck_petrol +=  amount;
+}
+
+void drive_to_next_pump(const int& distance, int& truck_petrol){
+    truck_petrol -= distance;
+}
+
+int day4::truckTour(vector<vector<int>> petrolpumps){
+
+    auto start_index{-1};
+
+    for(auto p{0}; p < petrolpumps.size() - 1; p++){
+
+        if(petrolpumps[p][0] - petrolpumps[p][1] >= 0){
+            start_index = p;
+            auto truck_petrol{petrolpumps[p][0]};
+
+            for(auto pp{start_index}; pp < petrolpumps.size() - 1; pp++){
+
+                if(truck_petrol >= petrolpumps[pp][1]){
+                    drive_to_next_pump(petrolpumps[pp][1], truck_petrol);
+                    refill_petrol(petrolpumps[pp + 1][0] , truck_petrol);
+
+                }else{
+                    start_index = -1;
+                    break;
+                }
+            }
+
+            if(start_index != -1) return start_index;
+        }
+    }
+    return start_index;
+}
+

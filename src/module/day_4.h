@@ -91,6 +91,16 @@ public:
     int minimumBribes(std::vector<int> q);
     int excecuteMinimumBribes();
 
+    /*
+     * Complete the 'truckTour' function below.
+     *
+     * The function is expected to return an INTEGER.
+     * The function accepts 2D_INTEGER_ARRAY petrolpumps as parameter.
+     */
+
+    int truckTour(std::vector<std::vector<int>> petrolpumps);
+    int executePetrolPumps();
+
 };
 
 #endif // DAY4_H

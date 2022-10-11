@@ -18,6 +18,7 @@ set(CORE_SOURCE
     src/main.cpp
     src/module/dummyLib.cpp
     src/module/day_4.cpp
+    src/module/day_5.cpp
 )
 
 set(CORE_HEADERS
@@ -27,11 +28,13 @@ set(CORE_HEADERS
     src/module/day_3.h
     src/module/day_4.h
     src/module/day_4.h
+    src/module/day_5.h
 )
 
 file(GLOB TEST_SOURCE
     src/test/dummy_Unittest.cpp
     src/test/day4_Unittest.cpp
+    src/test/day5_Unittest.cpp
     src/test/main.cpp
     src/test/day1_PerformanceTest.cpp
     src/test/day2_PerformanceTest.cpp
