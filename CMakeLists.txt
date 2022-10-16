@@ -16,13 +16,11 @@ set(CMAKE_CXX_EXTENSIONS ON)
 ######################################################################################
 set(CORE_SOURCE
     src/main.cpp
-    src/module/dummyLib.cpp
     src/module/day_4.cpp
     src/module/day_5.cpp
 )
 
 set(CORE_HEADERS
-    src/module/dummyLib.h
     src/module/day_1.h
     src/module/day_2.h
     src/module/day_3.h
@@ -32,7 +30,6 @@ set(CORE_HEADERS
 )
 
 file(GLOB TEST_SOURCE
-    src/test/dummy_Unittest.cpp
     src/test/day4_Unittest.cpp
     src/test/day5_Unittest.cpp
     src/test/main.cpp
@@ -40,6 +37,7 @@ file(GLOB TEST_SOURCE
     src/test/day2_PerformanceTest.cpp
     src/test/day3_PerformanceTest.cpp
     src/test/day4_PerformanceTest.cpp
+    src/test/day5_PerformanceTest.cpp
 )
 
 set(ALL_SRC_CODE ${CORE_SOURCE} ${CORE_HEADERS})
