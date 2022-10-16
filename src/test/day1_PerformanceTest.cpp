@@ -1,50 +1,50 @@
 #include "benchmark/benchmark.h"
 #include "day_1.h"
 
-static void BM_plusMinus(benchmark::State &state)
-{
+static void DISABLED_BM_plusMinus(benchmark::State &state) {
 
   // Perform setup here
-  for (auto _ : state)
-  {
+  for (auto _ : state) {
     // This code gets timed
     executePlusMinus();
   }
+  state.SetComplexityN(state.range(0));
 }
-BENCHMARK(BM_plusMinus);
+BENCHMARK(DISABLED_BM_plusMinus)
+    ->RangeMultiplier(2)
+    ->Range(1 << 10, 1 << 18)
+    ->Complexity(benchmark::oN);
 
-static void BM_timeConversion(benchmark::State &state)
-{
+static void DISABLED_BM_timeConversion(benchmark::State &state) {
 
-    // Perform setup here
-    for (auto _ : state)
-    {
-        // This code gets timed
-        executeTimeConversion();
-    }
+  // Perform setup here
+  for (auto _ : state) {
+    // This code gets timed
+    executeTimeConversion();
+  }
+  state.SetComplexityN(state.range(0));
 }
-BENCHMARK(BM_timeConversion);
+BENCHMARK(DISABLED_BM_timeConversion)
+    ->RangeMultiplier(2)
+    ->Range(1 << 10, 1 << 18)
+    ->Complexity([](benchmark::IterationCount n) -> double { return n; });
 
-static void BM_miniMax(benchmark::State &state)
-{
+static void DISABLED_BM_miniMax(benchmark::State &state) {
 
-    // Perform setup here
-    for (auto _ : state)
-    {
-        // This code gets timed
-        executeMiniMax();
-    }
+  // Perform setup here
+  for (auto _ : state) {
+    // This code gets timed
+    executeMiniMax();
+  }
 }
-BENCHMARK(BM_miniMax);
+BENCHMARK(DISABLED_BM_miniMax);
 
-static void BM_findMedian(benchmark::State &state)
-{
+static void DISABLED_BM_findMedian(benchmark::State &state) {
 
-    // Perform setup here
-    for (auto _ : state)
-    {
-        // This code gets timed
-        executeFindMedian();
-    }
+  // Perform setup here
+  for (auto _ : state) {
+    // This code gets timed
+    executeFindMedian();
+  }
 }
-BENCHMARK(BM_findMedian);
+BENCHMARK(DISABLED_BM_findMedian);

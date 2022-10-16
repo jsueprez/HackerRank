@@ -1,50 +1,42 @@
 #include "benchmark/benchmark.h"
 #include "day_2.h"
 
-static void BM_lonelyInteger(benchmark::State &state)
-{
+static void DISABLED_BM_lonelyInteger(benchmark::State &state) {
 
   // Perform setup here
-  for (auto _ : state)
-  {
+  for (auto _ : state) {
     // This code gets timed
     executeLonelyInteger();
   }
 }
-BENCHMARK(BM_lonelyInteger);
+BENCHMARK(DISABLED_BM_lonelyInteger);
 
-static void BM_diagonalDifference(benchmark::State &state)
-{
+static void DISABLED_BM_diagonalDifference(benchmark::State &state) {
 
-    // Perform setup here
-    for (auto _ : state)
-    {
-        // This code gets timed
-        executeDiagonalDifference();
-    }
+  // Perform setup here
+  for (auto _ : state) {
+    // This code gets timed
+    executeDiagonalDifference();
+  }
 }
-BENCHMARK(BM_diagonalDifference);
+BENCHMARK(DISABLED_BM_diagonalDifference);
 
-static void BM_countingSort(benchmark::State &state)
-{
+static void DISABLED_BM_countingSort(benchmark::State &state) {
 
-    // Perform setup here
-    for (auto _ : state)
-    {
-        // This code gets timed
-        executeCountingSort();
-    }
+  // Perform setup here
+  for (auto _ : state) {
+    // This code gets timed
+    executeCountingSort();
+  }
 }
-BENCHMARK(BM_countingSort);
+BENCHMARK(DISABLED_BM_countingSort);
 
-static void BM_flippingMatrix(benchmark::State &state)
-{
+static void DISABLED_BM_flippingMatrix(benchmark::State &state) {
 
-    // Perform setup here
-    for (auto _ : state)
-    {
-        // This code gets timed
-        executeFlippingMatrix();
-    }
+  // Perform setup here
+  for (auto _ : state) {
+    // This code gets timed
+    executeFlippingMatrix();
+  }
 }
-BENCHMARK(BM_flippingMatrix);
+BENCHMARK(DISABLED_BM_flippingMatrix);
