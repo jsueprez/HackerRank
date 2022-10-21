@@ -30,12 +30,17 @@ int get_operations(int k, vector<int> A) {
 }
 
 int day_6::cookies(int k, vector<int> A) {
-  // Brute Force
+  /*
+    1.Sort the array
+    2.Check whether there is a number less than k
+    3.if no return 0
+    4.if yes count++, extract A[0] and A[1] and insert back A[0] + A[1*2]
+    5. repeat 2
+
+    First do  Brute Force but
+    Recurssion possible solution
+  */
   std::sort(A.begin(), A.end());
-
-  auto result{get_operations(int k, vector<int> A)};
-
-  return result;
 
   return 3;
 }
