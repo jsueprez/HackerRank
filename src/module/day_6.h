@@ -8,8 +8,6 @@
 
 namespace day_6 {
 
-enum class operation { e_no_modified, e_append, e_erase };
-
 class TextEditor {
 private:
   std::string m_str;
@@ -27,9 +25,9 @@ public:
   void erase(const int n);
   const char get_ch(int pos) const { return m_str[pos - 1]; };
   void undo();
-
-private:
 };
+
+int cookies(int k, std::vector<int> A);
 
 } // namespace day_6
 
