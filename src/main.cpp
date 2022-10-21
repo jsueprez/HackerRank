@@ -112,15 +112,16 @@ int main() {
 
   day_6::TextEditor editor("");
 
-  //   for (const auto &q : queries) {
-  //     if (q[0] == 1) {
-  //       list.push_back(q[1]);
-  //     } else if (q[0] == 2) {
-  //       list.pop_front();
-  //     } else if (q[0] == 3) {
-  //       cout << list.front() << '\n';
-  //     }
-  //   }
+  for (const auto &q : queries) {
+    if (q[0] == "1")
+      editor.append(q[1]);
+    else if (q[0] == "2")
+      editor.erase(stoi(q[1]));
+    else if (q[0] == "3")
+      cout << editor.get_ch(stoi(q[1])) << '\n';
+    else if (q[0] == "4")
+      editor.undo();
+  }
 
   return 0;
 }

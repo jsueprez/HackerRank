@@ -48,3 +48,9 @@ TEST_F(TestingDay6, undo_operation) {
   editor.undo();
   EXPECT_EQ(editor.get_top_history(), "Hello world");
 }
+
+TEST_F(TestingDay6, cookies) {
+  std::vector<int> v1{2, 7, 3, 6, 4, 6};
+  auto k{9};
+  EXPECT_EQ(cookies(k, v1), 4);
+}
