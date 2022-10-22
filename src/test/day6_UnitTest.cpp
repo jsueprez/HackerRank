@@ -54,3 +54,40 @@ TEST_F(TestingDay6, cookies) {
   auto k{9};
   EXPECT_EQ(cookies(k, v1), 4);
 }
+
+TEST_F(TestingDay6, cookies_test_0) {
+  std::vector<int> v1{1, 2, 3, 9, 10, 12};
+  auto k{7};
+  EXPECT_EQ(cookies(k, v1), 2);
+}
+TEST_F(TestingDay6, cookies_test_0_1) {
+  std::vector<int> v1{1, 1, 1};
+  auto k{10};
+  EXPECT_EQ(cookies(k, v1), -1);
+}
+
+TEST_F(TestingDay6, cookies_test_2) {
+  std::vector<int> v1{52, 96, 13, 37};
+  auto k{10};
+  EXPECT_EQ(cookies(k, v1), 0);
+}
+
+TEST_F(TestingDay6, cookies_test_3) {
+  std::vector<int> v1{13, 47, 74, 12, 89, 74, 18, 38};
+  auto k{90};
+  EXPECT_EQ(cookies(k, v1), 5);
+}
+
+TEST_F(TestingDay6, cookies_test_4) {
+  std::vector<int> v1{1, 62, 14};
+  auto k{9};
+  EXPECT_EQ(cookies(k, v1), 1);
+}
+
+TEST_F(TestingDay6, cookies_test_5) {
+  std::vector<int> v1{6214, 8543, 9266, 1150, 7498, 7209, 9398, 1529, 1032,
+                      7384, 6784, 34,   1449, 7598, 8795, 756,  7803, 4112,
+                      298,  4967, 1261, 1724, 4272, 1100, 9373};
+  auto k{3581};
+  EXPECT_EQ(cookies(k, v1), 7);
+}

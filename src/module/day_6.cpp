@@ -1,5 +1,6 @@
 #include "day_6.h"
 #include <iostream>
+#include <queue>
 #include <vector>
 
 using namespace day_6;
@@ -23,24 +24,30 @@ void TextEditor::undo() {
   m_str = m_history.top();
 }
 
-int get_operations(int k, vector<int> A) {
-  if (std::any_of(A.begin(), A.end(), [k](const int x1) { return x1 < k; })) {
-    vector<>
-  }
-}
-
 int day_6::cookies(int k, vector<int> A) {
   /*
-    1.Sort the array
-    2.Check whether there is a number less than k
-    3.if no return 0
-    4.if yes count++, extract A[0] and A[1] and insert back A[0] + A[1*2]
-    5. repeat 2
-
-    First do  Brute Force but
-    Recurssion possible solution
+    PRIORITY_QUEUE is a container adaptor that provides constant time lookup of
+    the largest (by default) element, at the expense of logarithmic insertion
+    and extraction. A user-provided Compare can be supplied to change the
+    ordering, e.g. using std::greater<T> would cause the smallest element to
+    appear as the top(). Working with a priority_queue is similar to managing a
+    heap in some random access container, with the benefit of not being able to
+    accidentally invalidate the heap.
   */
-  std::sort(A.begin(), A.end());
+  auto operations{0};
+  if (std::all_of(A.begin(), A.end(), [k](const int x) { return x > k; }))
+    return operations;
 
-  return 3;
+  std::priority_queue<int, vector<int>, std::greater<int>> pq1(A.begin(),
+                                                               A.end());
+
+  while (pq1.top() < k && pq1.size() > 1) {
+    auto least_sweat{pq1.top()};
+    pq1.pop();
+    auto second_least_sweat{pq1.top()};
+    pq1.pop();
+    pq1.push(least_sweat + (second_least_sweat * 2));
+    operations++;
+  };
+  return pq1.top() < k ? -1 : operations;
 }
